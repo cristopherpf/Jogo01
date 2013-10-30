@@ -11,7 +11,6 @@ function Update () {
 
 @RPC
 function shoot() {
-     Debug.Log ("atirando em: " + transform.position + " , " + transform.rotation);
      var instanceBullet = Instantiate(prefabBullet, shootPosition.position, shootPosition.rotation);
      instanceBullet.rigidbody.AddForce(shootPosition.forward * shootForce);
 }
