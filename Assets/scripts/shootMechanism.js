@@ -6,6 +6,7 @@ var shootForce:float = 2000;
 function Update () {
 	if(Input.GetButtonDown("Jump") && networkView.isMine) {
     	networkView.RPC("shoot", RPCMode.AllBuffered);
+    	transform.networkView.RPC("SpendBullet", RPCMode.AllBuffered);
     }
 }
 
